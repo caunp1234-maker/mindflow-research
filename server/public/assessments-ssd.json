@@ -1,0 +1,410 @@
+{
+  "schemaVersion": "1.0",
+  "specVersion": "ssd_cbt-0.1",
+  "status": "DRAFT",
+  "generatedFrom": ["설문지_ver1.1_260422_전체 취합본.pdf", "PHQ.docx"],
+  "clinicalApproval": {
+    "status": "pending",
+    "reviewer": null,
+    "date": null,
+    "note": "문항 문구·응답 라벨은 제공된 PDF 원문. 채점·심각도·절단점은 PHQ.docx 표를 그대로 옮겼다. WHOQOL-BREF 도메인 매핑, ASI-3 하위척도, K-HAQ 평균/합산 여부, SSD-12 회상기간은 docs/open-questions.md 참조 — 임상 검토자 확인 전까지 pending."
+  },
+
+  "order": ["phq15", "ssd12", "bdi2", "bai", "asi3", "whoqol_bref", "khaq"],
+
+  "responseGroups": {
+    "phq15_scale": [
+      { "value": 0, "label": "전혀 시달리지 않음" },
+      { "value": 1, "label": "약간 시달림" },
+      { "value": 2, "label": "대단히 시달림" }
+    ],
+    "ssd12_scale": [
+      { "value": 0, "label": "전혀 그렇지 않다" },
+      { "value": 1, "label": "드물게 그렇다" },
+      { "value": 2, "label": "가끔 그렇다" },
+      { "value": 3, "label": "자주 그렇다" },
+      { "value": 4, "label": "항상 그렇다" }
+    ],
+    "bdi2_scale": [
+      { "value": 0, "label": "0" },
+      { "value": 1, "label": "1" },
+      { "value": 2, "label": "2" },
+      { "value": 3, "label": "3" }
+    ],
+    "bai_scale": [
+      { "value": 0, "label": "전혀 느끼지 않았다" },
+      { "value": 1, "label": "조금 느꼈다" },
+      { "value": 2, "label": "상당히 느꼈다" },
+      { "value": 3, "label": "심하게 느꼈다" }
+    ],
+    "asi3_scale": [
+      { "value": 0, "label": "전혀 그렇지 않다" },
+      { "value": 1, "label": "대체로 그렇지 않다" },
+      { "value": 2, "label": "보통이다" },
+      { "value": 3, "label": "대체로 그렇다" },
+      { "value": 4, "label": "매우 그렇다" }
+    ],
+    "whoqol_qol": [
+      { "value": 1, "label": "매우 나쁨" }, { "value": 2, "label": "나쁨" },
+      { "value": 3, "label": "나쁘지도 좋지도 않음" }, { "value": 4, "label": "좋음" }, { "value": 5, "label": "매우 좋음" }
+    ],
+    "whoqol_satisfaction": [
+      { "value": 1, "label": "매우 불만족" }, { "value": 2, "label": "불만족" },
+      { "value": 3, "label": "만족하지도 불만족하지도 않음" }, { "value": 4, "label": "만족" }, { "value": 5, "label": "매우 만족" }
+    ],
+    "whoqol_extent": [
+      { "value": 1, "label": "전혀 아니다" }, { "value": 2, "label": "약간 그렇다" },
+      { "value": 3, "label": "그렇다" }, { "value": 4, "label": "많이 그렇다" }, { "value": 5, "label": "매우 많이 그렇다" }
+    ],
+    "whoqol_capability": [
+      { "value": 1, "label": "전혀 아니다" }, { "value": 2, "label": "약간 그렇다" },
+      { "value": 3, "label": "그렇다" }, { "value": 4, "label": "대부분 그렇다" }, { "value": 5, "label": "전적으로 그렇다" }
+    ],
+    "whoqol_frequency_neg": [
+      { "value": 1, "label": "전혀 아니다" }, { "value": 2, "label": "드물게 그렇다" },
+      { "value": 3, "label": "제법 그렇다" }, { "value": 4, "label": "매우 자주 그렇다" }, { "value": 5, "label": "항상 그렇다" }
+    ],
+    "khaq_scale": [
+      { "value": 0, "label": "전혀 그렇지 않거나 매우 드물게 있다" }, { "value": 1, "label": "가끔 그렇다" },
+      { "value": 2, "label": "자주 있다" }, { "value": 3, "label": "거의 대부분 그러하다" }
+    ]
+  },
+
+  "assessments": {
+
+    "phq15": {
+      "id": "phq15", "name": "PHQ-15(신체증상척도)", "fullName": "Patient Health Questionnaire-15",
+      "instructionStem": "지난 4주 동안, 다음 나열되는 증상들에 얼마나 시달리셨습니까?",
+      "responseGroup": "phq15_scale",
+      "items": [
+        { "number": 1, "text": "위통" },
+        { "number": 2, "text": "허리통증" },
+        { "number": 3, "text": "팔, 다리, 관절(무릎, 고관절 등)의 통증" },
+        { "number": 4, "text": "생리기간 동안 생리통 등의 문제" },
+        { "number": 5, "text": "두통" },
+        { "number": 6, "text": "가슴 통증, 흉통" },
+        { "number": 7, "text": "어지러움" },
+        { "number": 8, "text": "기절할 것 같음" },
+        { "number": 9, "text": "심장이 빨리 뜀" },
+        { "number": 10, "text": "숨이 참" },
+        { "number": 11, "text": "성교 중 통증 등의 문제" },
+        { "number": 12, "text": "변비, 묽은 변이나 설사" },
+        { "number": 13, "text": "메슥거림, 방귀, 소화불량" },
+        { "number": 14, "text": "피로감, 기운 없음" },
+        { "number": 15, "text": "수면의 어려움" }
+      ],
+      "scoring": { "method": "sum", "scoredItems": "all", "totalRange": [0, 30] },
+      "severityBands": [
+        { "key": "minimal", "label": "최소한의 신체화 증상", "min": 0, "max": 4 },
+        { "key": "mild", "label": "경미한 신체화 증상", "min": 5, "max": 9 },
+        { "key": "moderate", "label": "중등도의 신체화 증상", "min": 10, "max": 14 },
+        { "key": "severe", "label": "중증 신체화 증상", "min": 15, "max": 30 }
+      ],
+      "interpretationTemplates": {
+        "minimal": "PHQ-15 총점 {total}점으로 최소한의 신체화 증상 수준입니다.",
+        "mild": "PHQ-15 총점 {total}점으로 경미한 신체화 증상 수준입니다.",
+        "moderate": "PHQ-15 총점 {total}점으로 중등도의 신체화 증상 수준입니다.",
+        "severe": "PHQ-15 총점 {total}점으로 중증 신체화 증상 수준입니다."
+      }
+    },
+
+    "ssd12": {
+      "id": "ssd12", "name": "SSD-12", "fullName": "한국판 신체증상장애-B 진단기준 척도",
+      "instructionStem": "사람들은 두통, 요통, 메스꺼움, 심장 떨림 등의 신체적 증상을 겪을 수 있습니다. 아래 문항은 이러한 신체적 증상에 대한 귀하의 생각과 감정, 그리고 행동방식에 관한 것입니다.",
+      "instructionStemNote": "회상기간이 원문에 명시되어 있지 않음 — docs/open-questions.md #7 확인 필요.",
+      "responseGroup": "ssd12_scale",
+      "items": [
+        { "number": 1, "text": "나는 나의 신체 증상이 심각한 질병의 신호라고 생각한다." },
+        { "number": 2, "text": "나는 나의 건강에 대해 걱정을 많이 한다." },
+        { "number": 3, "text": "나는 건강에 대한 걱정 때문에 일상생활에서 지장을 받는다." },
+        { "number": 4, "text": "나는 나의 증상이 심각하다고 확신한다." },
+        { "number": 5, "text": "나는 신체 증상 때문에 겁이 난다." },
+        { "number": 6, "text": "나는 하루 대부분을 신체적 불편에 몰두해 있다." },
+        { "number": 7, "text": "다른 사람들은 나의 신체적 문제가 심각하지 않다고 말한다." },
+        { "number": 8, "text": "나는 신체적 불편에서 벗어나지 못할까 봐 걱정이다." },
+        { "number": 9, "text": "나의 건강에 대한 걱정 때문에 에너지가 소진된다." },
+        { "number": 10, "text": "의사들은 나의 신체적 불편을 심각하게 여기지 않는 것 같다." },
+        { "number": 11, "text": "신체적 불편 때문에 다른 일에 집중하기 어렵다." },
+        { "number": 12, "text": "나의 신체 증상이 앞으로도 나에게 나쁜 영향을 미칠까 봐 걱정된다." }
+      ],
+      "scoring": { "method": "sum", "scoredItems": "all", "totalRange": [0, 48] },
+      "clinicalCutoff": { "score": 29, "operator": "gte", "positiveLabel": "SSD 관련 심리적 부담이 높은 수준 (SSD 선별 cutoff)" },
+      "severityBands": [
+        { "key": "low", "label": "낮은 신체증상 관련 심리적 부담", "min": 0, "max": 28 },
+        { "key": "high", "label": "SSD 관련 심리적 부담이 높은 수준", "min": 29, "max": 48 }
+      ],
+      "interpretationTemplates": {
+        "low": "SSD-12 총점 {total}점으로 낮은 신체증상 관련 심리적 부담 수준입니다.",
+        "high": "SSD-12 총점 {total}점으로 SSD 관련 심리적 부담이 높은 수준입니다(선별 cutoff 이상)."
+      }
+    },
+
+    "bdi2": {
+      "id": "bdi2", "name": "BDI-II", "fullName": "Beck 우울척도 2판",
+      "instructionStem": "오늘을 포함해서 지난 2주일간 당신의 기분을 가장 잘 표현하는 문장 하나를 선택하십시오. 16번(수면 양상 변화)과 18번(식욕 변화)을 포함하여 반드시 하나의 문장만 선택합니다.",
+      "responseGroup": "bdi2_scale",
+      "items": [
+        { "number": 1, "text": "슬픔", "options": [
+          { "value": 0, "label": "나는 슬프지 않다." }, { "value": 1, "label": "나는 슬플 때가 자주 있다." },
+          { "value": 2, "label": "나는 항상 슬프다." }, { "value": 3, "label": "나는 너무 슬프고 불행해서 견딜 수가 없다." } ] },
+        { "number": 2, "text": "비관주의", "options": [
+          { "value": 0, "label": "나는 미래에 대해 낙심하지 않는다." }, { "value": 1, "label": "나는 이전에 비해 미래에 대한 희망이 줄었다." },
+          { "value": 2, "label": "나는 내 앞날이 잘 풀릴 것이라고 기대하지 않는다." }, { "value": 3, "label": "나는 미래가 희망이 없고 점점 더 나빠질 것 같은 느낌이 든다." } ] },
+        { "number": 3, "text": "과거의 실패", "options": [
+          { "value": 0, "label": "나는 나 자신을 실패자라고 느끼지 않는다." }, { "value": 1, "label": "나는 생각보다 많은 실패를 했다." },
+          { "value": 2, "label": "돌이켜보면, 나는 실패를 너무 많이 했다." }, { "value": 3, "label": "나는 인간으로서 완전히 실패한 것 같다." } ] },
+        { "number": 4, "text": "즐거움 상실", "options": [
+          { "value": 0, "label": "나는 이전처럼 내가 좋아하는 일을 하면서 즐거움을 느낀다." }, { "value": 1, "label": "나의 이전만큼 일을 즐기지 못하고 있다." },
+          { "value": 2, "label": "나는 이전과 달리 일에서 즐거움을 거의 느끼지 못하고 있다." }, { "value": 3, "label": "나는 이전과 달리 어떤 일에서도 즐거움을 느끼지 못하고 있다." } ] },
+        { "number": 5, "text": "죄책감", "options": [
+          { "value": 0, "label": "나는 특별히 죄책감을 느끼지 않는다." }, { "value": 1, "label": "나는 내가 했던 일이나 하지 못했던 일 때문에 죄책감을 느낀다." },
+          { "value": 2, "label": "나는 죄책감을 느낄 때가 자주 있다." }, { "value": 3, "label": "나는 항상 죄책감을 느낀다." } ] },
+        { "number": 6, "text": "처벌감", "options": [
+          { "value": 0, "label": "나는 내가 벌을 받고 있다고 느끼지 않는다." }, { "value": 1, "label": "나는 어쩌면 벌을 받을지도 모른다는 느낌이 든다." },
+          { "value": 2, "label": "나는 벌을 받을 것 같다." }, { "value": 3, "label": "나는 지금 현재 벌을 받고 있다는 느낌이 든다." } ] },
+        { "number": 7, "text": "자기 비호감", "options": [
+          { "value": 0, "label": "나는 나 자신에 대해 변함없이 같은 느낌이다." }, { "value": 1, "label": "나는 나 자신에 대한 믿음이 없어졌다." },
+          { "value": 2, "label": "나는 나 자신에 대해 실망하고 있다." }, { "value": 3, "label": "나는 내 자신을 혐오한다." } ] },
+        { "number": 8, "text": "자기 비난", "options": [
+          { "value": 0, "label": "나는 이전에 비해 자신을 더 탓하거나 비난하지 않는다." }, { "value": 1, "label": "나는 이전에 비해 나 자신을 더 많이 탓한다." },
+          { "value": 2, "label": "내가 저지른 실수는 다 나의 잘못 때문이라고 생각한다." }, { "value": 3, "label": "안 좋은 일이 벌어지면 다 나 때문인 것 같아 자신을 비난한다." } ] },
+        { "number": 9, "text": "자살 생각 또는 소망", "flags": ["safety_item"], "options": [
+          { "value": 0, "label": "나는 자살 같은 것을 생각하지 않는다." }, { "value": 1, "label": "나는 자살을 생각해 본 적은 있지만, 행동으로 옮기지는 않을 것이다." },
+          { "value": 2, "label": "나는 자살하고 싶다." }, { "value": 3, "label": "나는 기회만 있으면 자살할 것이다." } ] },
+        { "number": 10, "text": "울음", "options": [
+          { "value": 0, "label": "나는 이전보다 울음이 더 많아지지 않았다." }, { "value": 1, "label": "나는 이전보다 울음이 더 많아졌다." },
+          { "value": 2, "label": "나는 사소한 일에도 울음이 터져 나온다." }, { "value": 3, "label": "나는 울고 싶어도 울 기력조차 없다." } ] },
+        { "number": 11, "text": "초조함", "options": [
+          { "value": 0, "label": "나는 이전보다 더 초조하거나 긴장되지 않는다." }, { "value": 1, "label": "나는 이전보다 더 초조하고 긴장된다." },
+          { "value": 2, "label": "나는 너무 초조해서 가만히 있기가 어렵다." }, { "value": 3, "label": "나는 너무 초조해서 계속 움직이거나 뭐든 하고 있어야 한다." } ] },
+        { "number": 12, "text": "흥미 상실", "options": [
+          { "value": 0, "label": "나는 사람들이나 일에 대한 관심이 변하지 않았다." }, { "value": 1, "label": "나는 사람들이나 일에 대한 관심이 이전에 비해 줄어들었다." },
+          { "value": 2, "label": "나는 사람들이나 일에 대한 관심이 많이 줄어들었다." }, { "value": 3, "label": "나는 어떤 것에도 관심을 갖기가 힘들다." } ] },
+        { "number": 13, "text": "우유부단함", "options": [
+          { "value": 0, "label": "나는 이전처럼 결정을 잘 내린다." }, { "value": 1, "label": "나는 이전처럼 결정을 내리기 힘들다." },
+          { "value": 2, "label": "나는 이전처럼 결정을 내리는 것이 너무 힘들다." }, { "value": 3, "label": "나는 어떤 결정도 내리기 힘들다." } ] },
+        { "number": 14, "text": "무가치감", "options": [
+          { "value": 0, "label": "나는 내가 무가치한 사람이라고 느끼지 않는다." }, { "value": 1, "label": "나는 내가 이전만큼 가치 있고 쓸모 있는 사람이라는 생각이 들지 않는다." },
+          { "value": 2, "label": "나는 다른 사람들보다 무가치한 사람이라는 느낌이 든다." }, { "value": 3, "label": "나는 완전히 무가치한 사람이라는 느낌이 든다." } ] },
+        { "number": 15, "text": "기력 상실", "options": [
+          { "value": 0, "label": "나는 이전에 비해 기력이 떨어지지 않는다." }, { "value": 1, "label": "나는 이전보다 기력이 떨어졌다." },
+          { "value": 2, "label": "나는 기력이 많이 떨어졌다." }, { "value": 3, "label": "나는 기력이 너무 없어 아무 일도 할 수가 없다." } ] },
+        { "number": 16, "text": "수면 양상 변화", "flags": ["variant_options"], "options": [
+          { "value": 0, "label": "나는 수면 양상에 변화가 없다." },
+          { "value": 1, "label": "나는 이전보다 잠이 약간 늘었다. (1a)" }, { "value": 1, "label": "나는 이전보다 잠이 약간 줄었다. (1b)" },
+          { "value": 2, "label": "나는 이전보다 잠이 훨씬 늘었다. (2a)" }, { "value": 2, "label": "나는 이전보다 잠이 훨씬 줄었다. (2b)" },
+          { "value": 3, "label": "나는 거의 하루 종일 잠을 잔다. (3a)" }, { "value": 3, "label": "나는 이전보다 1~2시간 일찍 잠을 깨고, 다시 잠들기 어렵다. (3b)" } ] },
+        { "number": 17, "text": "짜증", "options": [
+          { "value": 0, "label": "나는 이전에 비해 짜증이 심해지지 않는다." }, { "value": 1, "label": "나는 이전에 비해 짜증이 약간 늘었다." },
+          { "value": 2, "label": "나는 이전에 비해 짜증이 훨씬 심해졌다." }, { "value": 3, "label": "나는 항상 짜증이 난다." } ] },
+        { "number": 18, "text": "식욕 변화", "flags": ["variant_options"], "options": [
+          { "value": 0, "label": "나는 식욕에 변화가 없다." },
+          { "value": 1, "label": "나는 이전보다 식욕이 약간 늘었다. (1a)" }, { "value": 1, "label": "나는 이전보다 식욕이 약간 줄었다. (1b)" },
+          { "value": 2, "label": "나는 이전보다 식욕이 많이 늘었다. (2a)" }, { "value": 2, "label": "나는 이전보다 식욕이 많이 줄었다. (2b)" },
+          { "value": 3, "label": "나는 식욕이 전혀 없다. (3a)" }, { "value": 3, "label": "나는 음식에 대한 욕구가 심해졌다. (3b)" } ] },
+        { "number": 19, "text": "집중력 저하", "options": [
+          { "value": 0, "label": "나는 이전처럼 집중을 잘 할 수 있다." }, { "value": 1, "label": "나는 이전만큼 집중을 잘 할 수 없다." },
+          { "value": 2, "label": "나는 어떤 일에도 오래 집중하기가 어렵다." }, { "value": 3, "label": "나는 어떤 일에도 전혀 집중할 수가 없다." } ] },
+        { "number": 20, "text": "피로", "options": [
+          { "value": 0, "label": "나는 평소보다 더 피곤하지는 않다." }, { "value": 1, "label": "나는 평소보다 더 쉽게 피곤해진다." },
+          { "value": 2, "label": "나는 너무 피곤해서 이전에 해왔던 많은 일들을 하기 힘들다." }, { "value": 3, "label": "나는 너무 피곤해서 이전에 해왔던 일들을 아무 것도 할 수 없다." } ] },
+        { "number": 21, "text": "성적 관심 상실", "options": [
+          { "value": 0, "label": "나는 성(性)에 대한 관심이 별다른 변화 없이 유지되고 있다." }, { "value": 1, "label": "나는 이전에 비해 성(性)에 대한 관심이 줄었다." },
+          { "value": 2, "label": "나는 최근에 성(性)에 대한 관심이 상당히 줄었다." }, { "value": 3, "label": "나는 성(性)에 대한 관심을 완전히 잃었다." } ] }
+      ],
+      "scoring": { "method": "sum", "scoredItems": "all", "totalRange": [0, 63] },
+      "severityBands": [
+        { "key": "minimal", "label": "정상/최소 우울", "min": 0, "max": 13 },
+        { "key": "mild", "label": "경도 우울", "min": 14, "max": 19 },
+        { "key": "moderate", "label": "중등도 우울", "min": 20, "max": 28 },
+        { "key": "severe", "label": "고도 우울", "min": 29, "max": 63 }
+      ],
+      "interpretationTemplates": {
+        "minimal": "BDI-II 총점 {total}점으로 정상/최소 우울 수준입니다.",
+        "mild": "BDI-II 총점 {total}점으로 경도 우울 수준입니다.",
+        "moderate": "BDI-II 총점 {total}점으로 중등도 우울 수준입니다.",
+        "severe": "BDI-II 총점 {total}점으로 고도 우울 수준입니다."
+      },
+      "safetyPathway": {
+        "itemNumber": 9, "triggerOperator": "gte", "triggerValue": 1, "suppressNormalLabel": true,
+        "placement": "결과 최상단 고정 배너",
+        "bannerTemplate": "⚠ 9번(자살 생각 또는 소망) 문항 응답 {itemValue}점(\"{itemLabel}\") — 임상적 확인이 필요합니다.",
+        "levels": [
+          { "itemValue": 1, "riskKey": "low", "riskLabel": "자살 생각 있음(행동 의도 없음)", "action": "면담 시 안전 확인 및 관찰" },
+          { "itemValue": 2, "riskKey": "moderate", "riskLabel": "자살 소망", "action": "즉시 임상적 평가 필요" },
+          { "itemValue": 3, "riskKey": "high", "riskLabel": "자살 의도(기회 있으면 실행)", "action": "즉시 위기 개입 및 담당 의료진 연락" }
+        ],
+        "missingItemMessage": "9번(자살사고) 문항이 무응답입니다 — 반드시 확인하십시오.",
+        "approvalPending": true
+      }
+    },
+
+    "bai": {
+      "id": "bai", "name": "BAI", "fullName": "Beck 불안척도",
+      "instructionStem": "오늘을 포함하여 지난 일주일동안 귀하의 상태를 가장 잘 나타내는 숫자를 선택해 주십시오.",
+      "responseGroup": "bai_scale",
+      "items": [
+        { "number": 1, "text": "가끔씩 몸이 저리고 쑤시며 감각이 마비된 느낌을 받는다." },
+        { "number": 2, "text": "흥분된 느낌을 받는다." },
+        { "number": 3, "text": "가끔씩 다리가 떨리곤 한다." },
+        { "number": 4, "text": "편안하게 쉴 수가 없다." },
+        { "number": 5, "text": "매우 나쁜 일이 일어날 것 같은 두려움을 느낀다." },
+        { "number": 6, "text": "어지러움(현기증)을 느낀다." },
+        { "number": 7, "text": "가끔씩 심장이 두근거리고 빨리 뛴다." },
+        { "number": 8, "text": "침착하지 못하다." },
+        { "number": 9, "text": "자주 겁을 먹고 무서움을 느낀다." },
+        { "number": 10, "text": "신경이 과민 되어 왔다." },
+        { "number": 11, "text": "가끔씩 숨이 막히고 질식할 것 같다." },
+        { "number": 12, "text": "자주 손이 떨린다." },
+        { "number": 13, "text": "안절부절못해 한다." },
+        { "number": 14, "text": "미칠 것 같은 두려움을 느낀다." },
+        { "number": 15, "text": "가끔씩 숨쉬기 곤란할 때가 있다." },
+        { "number": 16, "text": "죽을 것 같은 두려움을 느낀다." },
+        { "number": 17, "text": "불안한 상태에 있다." },
+        { "number": 18, "text": "자주 소화가 잘 안되고 뱃속이 불편하다." },
+        { "number": 19, "text": "가끔씩 기절할 것 같다." },
+        { "number": 20, "text": "자주 얼굴이 붉어지곤 한다." },
+        { "number": 21, "text": "땀을 많이 흘린다(더위로 인한 경우는 제외)." }
+      ],
+      "scoring": { "method": "sum", "scoredItems": "all", "totalRange": [0, 63] },
+      "severityBands": [
+        { "key": "minimal", "label": "정상/최소 불안", "min": 0, "max": 7 },
+        { "key": "mild", "label": "경도 불안", "min": 8, "max": 15 },
+        { "key": "moderate", "label": "중등도 불안", "min": 16, "max": 25 },
+        { "key": "severe", "label": "고도 불안", "min": 26, "max": 63 }
+      ],
+      "interpretationTemplates": {
+        "minimal": "BAI 총점 {total}점으로 정상/최소 불안 수준입니다.",
+        "mild": "BAI 총점 {total}점으로 경도 불안 수준입니다.",
+        "moderate": "BAI 총점 {total}점으로 중등도 불안 수준입니다.",
+        "severe": "BAI 총점 {total}점으로 고도 불안 수준입니다."
+      }
+    },
+
+    "asi3": {
+      "id": "asi3", "name": "ASI-3", "fullName": "한국어판 불안민감성 지표-3",
+      "instructionStem": "자신이 불안을 느낄 때, 얼마나 자주 그런 생각들이 드는지를 평가해 주시기 바랍니다.",
+      "responseGroup": "asi3_scale",
+      "items": [
+        { "number": 1, "text": "남에게 불안하게 보이지 않아야 한다." },
+        { "number": 2, "text": "일에 집중할 수 없게 되면 미쳐버리지 않을까 걱정이 된다." },
+        { "number": 3, "text": "심장이 빨리 뛰어서 겁이 난다." },
+        { "number": 4, "text": "뱃속이 불편할 때 심각한 병에 걸리지 않았나 걱정이 된다." },
+        { "number": 5, "text": "일에 집중할 수 없어서 겁이 난다." },
+        { "number": 6, "text": "목구멍이 조여 오면, 질식해서 죽을 것 같아 두렵다." },
+        { "number": 7, "text": "가슴이 조여 오면, 제대로 숨을 쉴 수 없을 것 같아 두려워진다." },
+        { "number": 8, "text": "가슴에 통증이 느껴지면, 심장마비가 올까봐 걱정이 된다." },
+        { "number": 9, "text": "다른 사람들이 내가 불안하다는 것을 알아차릴까봐 걱정된다." },
+        { "number": 10, "text": "정신이 몽롱해지면, 정신병이 있을까봐 걱정이 된다." },
+        { "number": 11, "text": "사람들 앞에서 얼굴이 붉어지면 두렵다." },
+        { "number": 12, "text": "심장이 빨리 뛰는 것을 느끼면, 심장마비가 올까봐 걱정이 된다." },
+        { "number": 13, "text": "사회적 상황에서 땀을 흘리면, 사람들이 나를 좋지 않게 생각할까 두렵다." },
+        { "number": 14, "text": "여러 생각이 물밀 듯 떠오르면 혹시 내가 미쳐가는건 아닌지 걱정이 된다." },
+        { "number": 15, "text": "사람들 앞에서 내가 떨고 있으면, 사람들이 나를 어떻게 생각할까 두렵다." },
+        { "number": 16, "text": "명료하게 생각할 수 없을 때, 나에게 무슨 문제가 있을까봐 걱정이 된다." },
+        { "number": 17, "text": "공공장소에서 기절하는 것은 끔찍한 일이라고 생각한다." },
+        { "number": 18, "text": "머리가 텅 빈 것 같을 때, 내가 뭔가 크게 잘못된 것은 아닌지 걱정이 된다." }
+      ],
+      "scoring": { "method": "sum", "scoredItems": "all", "totalRange": [0, 72] },
+      "severityBands": [],
+      "severityBandsNote": "PHQ.docx: 별도 공식 중증도 기준 없음. 점수가 높을수록 불안민감성이 높음. 하위척도(신체적/인지적/사회적 우려) 문항 매핑은 docs/open-questions.md #8 확인 필요.",
+      "interpretationTemplates": {
+        "default": "ASI-3 총점 {total}점입니다. 별도 절단점은 없으며 점수가 높을수록 불안민감성이 높습니다."
+      }
+    },
+
+    "whoqol_bref": {
+      "id": "whoqol_bref", "name": "WHOQOL-BREF", "fullName": "한국어판 WHO 삶의 질 척도",
+      "instructionStem": "최근 2주 동안(오늘을 포함해서) 당신의 삶에 대해 어떻게 생각하는지를 묻는 질문입니다.",
+      "items": [
+        { "number": 1, "text": "당신은 당신의 삶의 질을 어떻게 평가하시겠습니까?", "responseGroup": "whoqol_qol" },
+        { "number": 2, "text": "당신은 당신의 건강상태에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 3, "text": "당신은 (신체적) 통증으로 인해 당신이 해야 할 일들을 어느 정도 방해받는다고 느낍니까?", "responseGroup": "whoqol_extent", "domainReverse": true },
+        { "number": 4, "text": "당신은 일상생활을 잘 하기 위해 얼마나 치료가 필요합니까?", "responseGroup": "whoqol_extent", "domainReverse": true },
+        { "number": 5, "text": "당신은 인생을 얼마나 즐기십니까?", "responseGroup": "whoqol_extent" },
+        { "number": 6, "text": "당신은 당신의 삶이 어느 정도 의미있다고 느낍니까?", "responseGroup": "whoqol_extent" },
+        { "number": 7, "text": "당신은 얼마나 잘 정신을 집중할 수 있습니까?", "responseGroup": "whoqol_extent" },
+        { "number": 8, "text": "당신은 일상생활에서 얼마나 안전하다고 느낍니까?", "responseGroup": "whoqol_extent" },
+        { "number": 9, "text": "당신은 얼마나 건강에 좋은 주거환경에 살고 있습니까?", "responseGroup": "whoqol_extent" },
+        { "number": 10, "text": "당신은 일상생활을 위한 에너지를 충분히 가지고 있습니까?", "responseGroup": "whoqol_capability" },
+        { "number": 11, "text": "당신의 신체적 외모에 만족합니까?", "responseGroup": "whoqol_capability" },
+        { "number": 12, "text": "당신은 당신의 필요를 만족시킬 수 있는 충분한 돈을 가지고 있습니까?", "responseGroup": "whoqol_capability" },
+        { "number": 13, "text": "당신은 매일 매일의 삶에서 당신이 필요로 하는 정보를 얼마나 쉽게 구할 수 있습니까?", "responseGroup": "whoqol_capability" },
+        { "number": 14, "text": "당신은 레저(여가)활동을 위한 기회를 어느 정도 가지고 있습니까?", "responseGroup": "whoqol_capability" },
+        { "number": 15, "text": "당신은 얼마나 잘 돌아다닐 수 있습니까?", "responseGroup": "whoqol_capability" },
+        { "number": 16, "text": "당신은 당신의 수면(잘 자는 것)에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 17, "text": "당신은 일상생활의 활동을 수행하는 당신의 능력에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 18, "text": "당신은 당신의 일할 수 있는 능력에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 19, "text": "당신은 당신 스스로에게 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 20, "text": "당신은 당신의 개인적 대인관계에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 21, "text": "당신은 당신의 성생활에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 22, "text": "당신은 당신의 친구로부터 받고 있는 도움에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 23, "text": "당신은 당신이 살고 있는 장소의 상태에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 24, "text": "당신은 의료서비스를 쉽게 받을 수 있다는 점에 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 25, "text": "당신은 당신이 사용하는 교통수단에 대해 얼마나 만족하고 있습니까?", "responseGroup": "whoqol_satisfaction" },
+        { "number": 26, "text": "당신은 침울한 기분, 절망, 불안, 우울감과 같은 부정적인 감정을 얼마나 자주 느낍니까?", "responseGroup": "whoqol_frequency_neg", "domainReverse": true }
+      ],
+      "scoring": { "method": "domain_transform", "note": "총점 단일값 없음 — 도메인별 0-100 변환 점수 산출(아래 domains)." },
+      "domains": [
+        { "key": "physical", "label": "신체적 건강", "items": [3, 4, 10, 15, 16, 17, 18], "reverseItems": [3, 4], "rawItemRange": [1, 5], "transformTo0to100": true },
+        { "key": "psychological", "label": "심리적 건강", "items": [5, 6, 7, 11, 19, 26], "reverseItems": [26], "rawItemRange": [1, 5], "transformTo0to100": true },
+        { "key": "social", "label": "사회적 관계", "items": [20, 21, 22], "reverseItems": [], "rawItemRange": [1, 5], "transformTo0to100": true },
+        { "key": "environment", "label": "환경", "items": [8, 9, 12, 13, 14, 23, 24, 25], "reverseItems": [], "rawItemRange": [1, 5], "transformTo0to100": true }
+      ],
+      "domainsNote": "WHO 표준 4도메인 구성으로 채웠다(국내 소스 문서 2건에는 도메인-문항 매핑이 없음) — docs/open-questions.md #9, 임상 검토자 확인 전까지 pending. 변환식: 문항평균(역채점 반영, 1–5) × 4 = 원점수(4–20) → (원점수−4)×(100/16) = 0–100.",
+      "reverseTransform": "역채점 문항은 (6 − 응답값)으로 치환 후 도메인 평균에 포함한다.",
+      "severityBands": [],
+      "interpretationTemplates": {
+        "default": "도메인별 변환 점수(0–100)는 각각 별도로 표기한다. 점수가 높을수록 해당 영역의 삶의 질이 높다."
+      }
+    },
+
+    "khaq": {
+      "id": "khaq", "name": "K-HAQ", "fullName": "한국판 건강불안 질문지 (Health Anxiety Questionnaire)",
+      "instructionStem": "건강과 관련된 불안을 느낄 때, 그와 같은 생각들이 얼마나 드는지를 보고 응답해 주십시오.",
+      "responseGroup": "khaq_scale",
+      "items": [
+        { "number": 1, "text": "건강에 대해서 걱정해 본 적이 있습니까?" },
+        { "number": 2, "text": "당신은 미래에 심각한 병에 걸릴 지도 모른다고 걱정한 적이 있습니까?" },
+        { "number": 3, "text": "심각한 병에 대한 생각으로 당신은 무서워한 적이 있습니까?" },
+        { "number": 4, "text": "몸에서 불쾌한 느낌을 알아차릴 때, 그러한 느낌을 그 밖의 또 다른 무엇으로 생각하기에는 어려움을 느끼는 경향이 있습니까?" },
+        { "number": 5, "text": "당신의 몸에서 무언가가 잘못되어 있는지 아닌지를 찾아내기 위하여 몸을 검사한 적이 있습니까?" },
+        { "number": 6, "text": "만약 당신에게 아픔 또는 고통이 있다면 그것이 심각한 병으로 인한 것일 지도 모른다고 걱정합니까?" },
+        { "number": 7, "text": "당신은 건강에 대한 걱정들을 다른 생각들로부터 떨쳐버리기가 어렵다는 것을 알게 된 적이 있습니까?" },
+        { "number": 8, "text": "몸에서 불쾌한 느낌을 알아차릴 때, 그것에 대해 걱정해 본 적이 있습니까?" },
+        { "number": 9, "text": "아침에 잠에서 깰 때, 당신은 당신의 건강에 대해서 매우 빨리 걱정하기 시작한다는 것을 알게 됩니까?" },
+        { "number": 10, "text": "심각한 병 또는 당신이 알고 있는 누군가의 죽음에 대해서 들을 때, 자신의 건강에 대해 더 걱정하게 된 적이 있습니까?" },
+        { "number": 11, "text": "TV 또는 라디오에서 병에 관해서 읽거나 들을 때, 당신이 그러한 병으로부터 고통 받고 있는 중일 지도 모른다는 생각이 든 적이 있습니까?" },
+        { "number": 12, "text": "몸에서 불쾌한 느낌을 경험할 때, 당신은 친구들 또는 가족들에게 그것들에 관해서 묻는 경향이 있습니까?" },
+        { "number": 13, "text": "당신이 병으로부터 고통 받고 있는 중인지 아닌지를 알아보기 위하여 아픔과 질병에 대해서 많은 것들을 읽어 보는 경향이 있습니까?" },
+        { "number": 14, "text": "죽음(장례식, 부고와 같은)을 생각나게 하는 소식들을 두려워한 적이 있습니까?" },
+        { "number": 15, "text": "당신이 곧 죽을 지도 모른다고 두려워한 적이 있습니까?" },
+        { "number": 16, "text": "당신은 암에 걸려 있을 지도 모른다고 두려워한 적이 있습니까?" },
+        { "number": 17, "text": "당신은 심장병을 앓고 있었을 지도 모른다고 두려워한 적이 있습니까?" },
+        { "number": 18, "text": "당신은 어떤 다른 병을 가지고 있을 지도 모른다고 두려워한 적이 있습니까?" },
+        { "number": 19, "text": "지난 6개월쯤 동안에 신체상의 증상들 때문에 당신이 일을 못하게 된 적이 있습니까?" },
+        { "number": 20, "text": "신체상의 증상들 때문에 당신이 하고 있는 것에 집중하지 못하게 됩니까?" },
+        { "number": 21, "text": "신체상의 증상들 때문에 즐거워지지 못하게 됩니까?" }
+      ],
+      "scoring": { "method": "mean", "scoredItems": "all", "totalRange": [0, 3] },
+      "scoringNote": "PHQ.docx의 총점 범위 표기(0–3)를 따라 평균 채점으로 구현했다. 같은 문서의 '점수를 더하면 총점이 산출' 서술과 상충 — docs/open-questions.md #10 확인 전까지 pending.",
+      "subscales": [
+        { "key": "health_worry", "label": "건강염려와 집착", "items": [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 18] },
+        { "key": "life_interference", "label": "삶에 대한 방해", "items": [19, 20, 21] },
+        { "key": "fear_of_illness_death", "label": "병과 죽음에 대한 공포", "items": [14, 15, 16, 17] },
+        { "key": "reassurance_seeking", "label": "안심추구 행동", "items": [5, 12, 13] }
+      ],
+      "subscalesNote": "하위요인별 산출 방식(평균/합산)도 원문에 명시 없음 — docs/open-questions.md #11.",
+      "severityBands": [
+        { "key": "mild_moderate", "label": "경도~중등도 기능장애", "min": 0, "max": 0.999 },
+        { "key": "moderate_severe", "label": "중등도~중증 기능장애", "min": 1, "max": 1.999 },
+        { "key": "severe_very_severe", "label": "중증~매우 중증 기능장애", "min": 2, "max": 3 }
+      ],
+      "interpretationTemplates": {
+        "mild_moderate": "K-HAQ 평균 {total}점으로 경도~중등도 기능장애 수준입니다.",
+        "moderate_severe": "K-HAQ 평균 {total}점으로 중등도~중증 기능장애 수준입니다.",
+        "severe_very_severe": "K-HAQ 평균 {total}점으로 중증~매우 중증 기능장애 수준입니다."
+      }
+    }
+  }
+}

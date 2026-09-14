@@ -1,0 +1,17 @@
+# 로컬 개발용 PostgreSQL. 호스팅 방식(사내 온프레미스 vs 클라우드)은 아직 미확정이므로
+# (../docs/open-questions.md #1) 실제 배포 구성은 별도로 정의한다. 이 파일은 개발자 로컬 실행용이다.
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mindflow
+      POSTGRES_PASSWORD: mindflow
+      POSTGRES_DB: mindflow_research
+    ports:
+      - "5432:5432"
+    volumes:
+      - mindflow_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mindflow_pgdata:
