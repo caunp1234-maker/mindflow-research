@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mind flow research</title>
+<link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+
+<div id="login-view">
+  <h1>Mind flow research</h1>
+  <form id="login-form">
+    <div class="field"><label for="login-email">이메일</label><input id="login-email" type="email" required autocomplete="username" /></div>
+    <div class="field"><label for="login-password">비밀번호</label><input id="login-password" type="password" required autocomplete="current-password" /></div>
+    <div class="error-text" id="login-error"></div>
+    <button type="submit">로그인</button>
+  </form>
+</div>
+
+<div id="app-view" class="hidden">
+  <div class="appbar">
+    <h1>Mind flow research</h1>
+    <div class="userinfo">
+      <span id="role-label"></span>
+      <button id="logout-btn">로그아웃</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="study-tabs" id="study-tabs"></div>
+    <div class="study-header panel" id="study-header"></div>
+    <div class="panel" id="subject-list-panel"></div>
+    <div class="panel hidden" id="subject-detail-panel"></div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/templates.js"></script>
+<script src="/js/assessment-engine.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
